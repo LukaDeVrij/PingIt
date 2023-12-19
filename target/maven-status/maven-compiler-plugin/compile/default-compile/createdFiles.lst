@@ -1,0 +1,3 @@
+org\lukadevrij\pingit\commands\PingItCommand.class
+org\lukadevrij\pingit\PingIt.class
+org\lukadevrij\pingit\events\PingEvent.class

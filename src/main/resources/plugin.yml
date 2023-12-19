@@ -1,0 +1,7 @@
+name: PingIt
+version: '${project.version}'
+main: org.lukadevrij.pingit.PingIt
+api-version: '1.20'
+commands:
+  pingit:
+    description: Ping a location
