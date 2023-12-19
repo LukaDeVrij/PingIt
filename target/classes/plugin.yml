@@ -1,7 +1,0 @@
-name: PingIt
-version: '1.0-SNAPSHOT'
-main: org.lukadevrij.pingit.PingIt
-api-version: '1.20'
-commands:
-  pingit:
-    description: Ping a location
