@@ -32,30 +32,9 @@ public class PingItCommand implements CommandExecutor {
             return true;
         }
 
-        Block targetBlock = player.getTargetBlock(getTransparentBlocks(), 128);
-        Location targetBlockLocation = targetBlock.getLocation();
-        Location playerLocation = player.getEyeLocation();
-        Vector direction = playerLocation.getDirection();
 
-        double distance = (playerLocation.distance(targetBlockLocation) / 10) * 8;
-        System.out.println(distance);
-        // Calculate the new location
-        Location particleLocation = playerLocation.add(direction.multiply(distance));
-
-        player.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, particleLocation, 100, 0, 0, 0, 0.05, null, true);
 
         return false;
     }
 
-    public static HashSet<Material> getTransparentBlocks() {
-        HashSet<Material> transparentBlocks = new HashSet<>();
-
-        for (Material material : Material.values()) {
-            if (!material.isOccluding()) {
-                transparentBlocks.add(material);
-            }
-        }
-
-        return transparentBlocks;
-    }
 }
